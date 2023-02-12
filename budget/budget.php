@@ -33,7 +33,9 @@ class Budget
             $this->type = 'Volvo';
             $this->yearlyAmount = 20000;
             $this->startDate = '2022-03-01';
-            $this->spent = [];
+            $this->spent = [
+                'udbedringer før omsyn' => 3792.63
+            ];
         }
     }
 
