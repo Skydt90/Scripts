@@ -34,7 +34,8 @@ class Budget
             $this->yearlyAmount = 20000;
             $this->startDate = '2022-03-01';
             $this->spent = [
-                'udbedringer før omsyn' => 3792.63
+                'udbedringer før omsyn' => 3792.63,
+                'partikelfilter skift' => 10497.25
             ];
         }
     }
