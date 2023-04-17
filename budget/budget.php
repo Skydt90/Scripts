@@ -35,7 +35,8 @@ class Budget
             $this->startDate = '2022-03-01';
             $this->spent = [
                 'udbedringer før omsyn' => 3792.63,
-                'partikelfilter skift' => 10497.25
+                'partikelfilter skift' => 10497.25,
+                'ny generator' => 3776.80
             ];
         }
     }
