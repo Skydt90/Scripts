@@ -3,6 +3,7 @@
 class Budget
 {
     private array $spent;
+    private array $extraSavings;
     private string $startDate;
     private int $totalMonths;
     private float $yearlyAmount;
@@ -28,6 +29,9 @@ class Budget
                 'slamsug af spildevandsledning' => 3909.75,
                 'selvrisiko kloakreperation'    => 2432.00,
             ];
+            $this->extraSavings = [
+                'kontant erstatning til kælder' => 8750.00
+            ];
         }
         else {
             $this->type = 'Volvo';
@@ -38,6 +42,7 @@ class Budget
                 'partikelfilter skift' => 10497.25,
                 'ny generator' => 3776.80
             ];
+            $this->extraSavings = [];
         }
     }
 
@@ -45,7 +50,7 @@ class Budget
     {
         $this->monthlyAmount = round($this->yearlyAmount / 12, 2);
         $this->totalMonths = $this->getMonthsPassedSince($this->startDate);
-        $this->totalSaved = round($this->totalMonths * $this->monthlyAmount, 2);
+        $this->totalSaved = round( ($this->totalMonths * $this->monthlyAmount) + array_sum(array_values($this->extraSavings)), 2);
         $this->totalSpent = array_sum(array_values($this->spent));
         $this->totalRemaining = $this->totalSaved - $this->totalSpent;
     }
