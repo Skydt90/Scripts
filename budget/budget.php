@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 class Budget
 {
     private array $spent;
@@ -28,6 +30,8 @@ class Budget
                 'tv-inspektion + spul af kloak' => 4414.00,
                 'slamsug af spildevandsledning' => 3909.75,
                 'selvrisiko kloakreperation'    => 2432.00,
+                'til gulvrenovation'            => 20000.00,
+                'lukning af huller i facaden'   => 5339.85
             ];
             $this->extraSavings = [
                 'kontant erstatning til kælder' => 8750.00
@@ -40,7 +44,8 @@ class Budget
             $this->spent = [
                 'udbedringer før omsyn' => 3792.63,
                 'partikelfilter skift' => 10497.25,
-                'ny generator' => 3776.80
+                'ny generator' => 3776.80,
+                'ny udstødning' => 3865.00
             ];
             $this->extraSavings = [];
         }
